@@ -62,6 +62,12 @@ function getLearnerData(CourseInfo, AssignmentGroup, [LearnerSubmission]) {
   return dueDate <= today;
 }
 
+function isLate(dueDate, submittedAt) {
+  const dueDateObj = new Date(dueDate);
+  const submittedAtObj = new Date(submittedAt);
+  return submittedAtObj > dueDateObj;
+}
+
  
 
 }
